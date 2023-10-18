@@ -5,4 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @FeignClient(name = "jsonPlaceHolder", url = "https://jsonplaceholder.typecode.com")
 public interface TodoClient {
+    @GetMapping("/todos/1")
+    TodoResponse fetchData();
 }
